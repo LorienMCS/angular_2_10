@@ -1,10 +1,7 @@
 # Custom Directives: Part 2
 
-Directives become much more powerful when they start manipulating the DOM.  Angular gives you controll over the DOM with two functions, `link` and `compile`
-
-**EXERCISE**
-
-Research `link` and `compile`.  What do the two functions do in angular?  Which one would be most commonly used for DOM manipulation?
+####EXERCISE: Research `link` and `compile`.  What do the two functions do in angular?  Which one would be most commonly used for DOM manipulation?
+#####$compile is Angular's HTML compiler, which walks the DOM and matches DOM elements to directives. You would use compile for directives like ng-repeat, ng-if, and ng-switch; and when you need to reuse an HTML template multiple times. Generally, though, directives don't need $compile, unless you're doing advanced DOM manipulation. The link property is only used if the compile property is not defined; it registers DOM listeners and updates the DOM. The link function has access to the scope; the compile method does not. The link function would be most commonly used for DOM manipulation.
 
 ![](https://lh6.googleusercontent.com/-TlY7amsfzPs/T9ZgLXXK1cI/AAAAAAABK-c/Ki-inmeYNKk/w749-h794/AngularJS-Shield-large.png)
 
