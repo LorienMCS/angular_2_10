@@ -3,51 +3,9 @@
 ####EXERCISE: Research `link` and `compile`.  What do the two functions do in angular?  Which one would be most commonly used for DOM manipulation?
 #####$compile is Angular's HTML compiler, which walks the DOM and matches DOM elements to directives. You would use compile for directives like ng-repeat, ng-if, and ng-switch; and when you need to reuse an HTML template multiple times. Generally, though, directives don't need $compile, unless you're doing advanced DOM manipulation. The link property is only used if the compile property is not defined; it registers DOM listeners and updates the DOM. The link function has access to the scope; the compile method does not. The link function would be most commonly used for DOM manipulation.
 
-![](https://lh6.googleusercontent.com/-TlY7amsfzPs/T9ZgLXXK1cI/AAAAAAABK-c/Ki-inmeYNKk/w749-h794/AngularJS-Shield-large.png)
 
-The `link` method is used to manipulate the DOM in your directive.  Below is a directive that uses `link` to change the background color of an element whenever it is moused over.
-
-`app.js`
-
-```js
-var app = angular.module('mouseOverDirectiveApp', [])
-
-app.directive('gsChangeBackground', function() {
-  return {
-    link: function(scope, element, attrs) {
-
-      var oldColor = element.css('background-color');
-      
-      element.on('mouseenter', function(event) {
-        element.css('background-color', 'yellow');
-      });
-
-      element.on('mouseleave', function(event) {
-        element.css('background-color', oldColor);
-      })
-    }
-  };
-});
-```
-
-`index.html`
-
-```html
-<!DOCTYPE html>
-<html ng-app="mouseOverDirectiveApp">
-<head>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular.js" type="text/javascript"></script>
-<script src="app.js" type="text/javascript"></script>
-</head>
-<body>
-  <div gs-change-background style="background-color: red">Hello World!</div>
-</body>
-</html>
-```
-
-**EXERCISE**
-
-How is the code able to call `element.on` and `element.css`?  What type of object is it?  Look in the angular docs for all available methods.
+####EXERCISE: How is the code able to call `element.on` and `element.css`?  What type of object is it?  Look in the angular docs for all available methods.
+#####Element references in Angular are wrapped with jqLite (Angular's built-in subset of jQuery) or jQuery (which, if used, needs to be loaded before angular.js). `element.css` and `element.on` can be called through jqLite. There are 33 other jQuery methods for element provided by jqLite. `element` is an HTML string or DOMElement to be wrapped into jQuery.
 
 **EXERCISE**
 
