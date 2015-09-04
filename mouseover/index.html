@@ -1,0 +1,30 @@
+<!doctype html>
+<!-- use the module created in app.js -->
+<html lang="en" ng-app="mouseOverDirectiveApp">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Angular 2-10</title>
+    <meta name="description" content="Galvanize Full Stack self-paced Angular. Unit 2, Part 10: Custom Directives: Part 2">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.4/lumen/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="container" ng-controller="MouseoverController">
+
+  <div gs-change-background style="background-color: red" bcolor="backcolor"><h2>Hello World!</h2></div>
+  <h3>Change the background color of "Hello World!"</h3>
+  <input type="text" ng-model="backcolor" placeholder="Enter a color"/>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular.js"></script>
+  <script src="js/ui-bootstrap-tpls-0.13.3.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular-route.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/controllers.js"></script>
+  <script src="js/directives.js"></script>
+</body>
+
+</html>
