@@ -2,19 +2,21 @@ app.directive('gsChangeBackground', function() {
   return {
   	restrict: 'A',
   	scope: {
-  		bcolor: '='
+  		bcolor: '=',
+  		tcolor: '='
   	},
     link: function(scope, element, attrs) {
 
-      var oldColor = element.css('background-color');
+      var oldBColor = element.css('background-color');
+      var oldTColor = element.css('color');
+
 
       element.on('mouseenter', function(event) {
-      	console.log("mouseenter");
-        element.css('background-color', scope.bcolor);
+        element.css({'background-color': scope.bcolor, 'color': scope.tcolor});
       });
 
       element.on('mouseleave', function(event) {
-        element.css('background-color', oldColor);
+        element.css({'background-color': oldBColor, 'color': oldTColor});
       })
     }
   };

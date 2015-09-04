@@ -15,9 +15,10 @@
 
 <body class="container" ng-controller="MouseoverController">
 
-  <div gs-change-background style="background-color: red" bcolor="backcolor"><h2>Hello World!</h2></div>
-  <h3>Change the background color of "Hello World!"</h3>
-  <input type="text" ng-model="backcolor" placeholder="Enter a color"/>
+  <div gs-change-background style="background-color:orange; color:black" bcolor="backcolor" tcolor="textcolor">Hello World!</div>
+  <h3>Change the background and text color of "Hello World!"</h3>
+  <label>Enter background color: <input type="text" ng-model="backcolor"/></label>
+  <label>Enter text color: <input type="text" ng-model="textcolor"/></label>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular.js"></script>
   <script src="js/ui-bootstrap-tpls-0.13.3.min.js"></script>
