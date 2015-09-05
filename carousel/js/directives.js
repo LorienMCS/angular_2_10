@@ -13,11 +13,12 @@ app.directive('lsImageCarousel', function() {
       scope.prev = function() {
         // if there are images to the left of the current image
         if (scope.currentImgIndex > 0) {
+          console.log("going one to the left")
           scope.currentImgIndex--;
         } else {
           // make it look like it's an actual carousel,
           // by going to the very far right image
-          scope.currentImgIndex = scope.images.length - 1;
+          scope.currentImgIndex = scope.slides.length - 1;
         };
         scope.slides.forEach(function(slide){
           slide.showing = false;
