@@ -1,6 +1,6 @@
 app.directive('lsImageCarousel', function() {
   return {
-    restrict: 'AE',
+    restrict: 'A',
     scope: {
       slides: '=',
     },

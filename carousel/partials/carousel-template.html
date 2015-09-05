@@ -1,11 +1,13 @@
 <div class="col-md-2"></div>
-<div class="col-md-1">
+<div class="col-md-1 v-center">
   <button type="submit" ng-click="prev()" class="btn btn-default"><span class="glyphicon glyphicon-arrow-left"></span></button>
 </div>
-<div class="col-md-6" ng-repeat="slide in slides" ng-show="slide.showing">
-  <span><img ng-src="{{slide.img}}" alt="photo of {{slide.desc}}" class="img-responsive"></span>
+<div class="col-md-6">
+	<div class="row" ng-repeat="slide in slides" ng-show="slide.showing">
+  	<span><img ng-src="{{slide.img}}" alt="photo of {{slide.desc}}" class="img-responsive"></span>
+	</div>
 </div>
-<div class="col-md-1">
+<div class="col-md-1 v-center">
   <button type="submit" ng-click="next()" class="btn btn-default"><span class="glyphicon glyphicon-arrow-right"></span></button>
 </div>
 <div class="col-md-2"></div>

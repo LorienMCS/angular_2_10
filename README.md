@@ -9,13 +9,4 @@
 
 ####EXERCISE: The `gsChangeBackground` directive could be more customizable.  Change the code so that the user of the directive can set an attribute on the tag that specifies what the new background color should be on mouse enter.  Also, add the ability for the user to change the text color on mouse enter as well.  If no new text color is specified, the text color should not change.  Lastly, our directive only makes sense in one context.  Add a restriction to the directive so that it can only be used in the correct way.  You'll have to figure out which way that is!
 
-**EXERCISE**
-
-Make an image carousel.  The carousel should be made with a custom directive.  The directive should expect an array of images to be passed in via an attribute.  The directive should also add left and right arrows each with their own `ng-click`.  Make sure the directive has an isolated scope.
-
-[Click here for animated gif](http://s13.postimg.org/5lvbgxa0l/carousel_angular_animated.gif")
-
-
-**EXERCISE**
-
-Build on the previous custom directive.  Add a thumb nail view at the top of the carousel.  Only show the thumb nail view if there are 5 or move images in the carousel.  The thumbnail should show the previous 2 images, the current image, and the next 2 images.
+####EXERCISE: Make an image carousel.  The carousel should be made with a custom directive.  The directive should expect an array of images to be passed in via an attribute.  The directive should also add left and right arrows each with their own `ng-click`.  Make sure the directive has an isolated scope.

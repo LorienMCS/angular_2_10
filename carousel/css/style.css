@@ -2,6 +2,10 @@
 	cursor: pointer;
 }
 
-.showing {
-	
+.v-center {
+	min-height: 100%;  /* Fallback for browsers that don't support vh unit */
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
 }
+
